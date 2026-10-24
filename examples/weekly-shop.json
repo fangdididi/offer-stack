@@ -1,0 +1,22 @@
+{
+  "settings": {"today": "2026-10-24", "channel": "app", "threshold_base": "after_item",
+               "cashback_haircut": 0.8, "point_value": 0.01, "maybe_credit": 0.8,
+               "shipping_fee": 6, "free_shipping_over": 59},
+  "items": [
+    {"id": "coffee", "name": "Ground coffee 500g", "price": 42, "want": "need", "low_30d": 36},
+    {"id": "oats", "name": "Rolled oats 1kg", "price": 15, "want": "need"},
+    {"id": "milk", "name": "Oat milk x2", "price": 12, "qty": 2, "want": "need"},
+    {"id": "soap", "name": "Dish soap refill", "price": 9.9, "want": "maybe"},
+    {"id": "tea", "name": "Green tea 100 bags", "price": 18, "want": "maybe"}
+  ],
+  "offers": [
+    {"id": "T80", "type": "threshold", "label": "Spend 80, save 12", "min_spend": 80, "value": 12, "group": "store"},
+    {"id": "T60", "type": "threshold", "label": "Spend 60, save 6", "min_spend": 60, "value": 6, "group": "store"},
+    {"id": "C30", "type": "percent", "label": "Coffee 30% off", "applies_to": ["coffee"], "value": 30},
+    {"id": "PAIR", "type": "bundle", "label": "Coffee + oats for 45", "slots": [["coffee"], ["oats"]], "price": 45},
+    {"id": "WALLET", "type": "payment", "label": "Wallet: 5 off over 50", "min_spend": 50, "value": 5},
+    {"id": "CB", "type": "cashback", "label": "3% cashback", "percent": 3},
+    {"id": "OLD", "type": "amount_off", "label": "Milk 3 off", "applies_to": ["milk"], "value": 3, "expires": "2026-10-20"},
+    {"id": "WEB", "type": "order_percent", "label": "Web-only 10%", "value": 10, "channels": ["web"]}
+  ]
+}
